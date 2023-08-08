@@ -1,11 +1,11 @@
 #!/bin/bash 
 
 TOKEN="123456789:AAXXAAXXASASFSDAFDGHHGERHER" # Telgram BOT Token 
-IDs=("2020202") # Telegram ID users | groups | chanels for send Massage
+IDs=("2020202") # Telegram ID users | groups | channels for send Message
 
 SUB_DOMAIN="sub.example.com"
 JQ_SUB_ID="jq -r --arg SUB_D "$SUB_DOMAIN" '.result |  map(select(.name  == "$SUB_D")) | .[].id'"
-PUBLIC_IP=`curl -s ifconfig.me` #Get PUBLIC IP
+PUBLIC_IP=`curl -s ifconfig.me` #Get Public IP
 BASE_URL="https://api.cloudflare.com/client/v4/zones"  # API ADDRESS 
 ZONE_ID="XXXXXXXXXXXXXXX" # Cloudflare Zone ID Domain
 AUTH_API_EMAIL="example@gmail.com" # Mail account cloudflare
