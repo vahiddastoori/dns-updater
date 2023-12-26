@@ -52,7 +52,7 @@ SUB_DOMAIN_CREATE_BODY="{
 }" 
 
 # Check domain is valid or not !
-SUB_DOMAIN_IP=`dig +short ${SUB_DOMAIN} 8.8.8.8`
+SUB_DOMAIN_IP=`dig +short ${SUB_DOMAIN} @8.8.8.8`
 CREAT_SUB=false # this flag for create sub domain is dosn;t exist
 UPDATE_SUB=false  # this flag for update ip sub domain is different
 
