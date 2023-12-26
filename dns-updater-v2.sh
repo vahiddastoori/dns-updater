@@ -72,8 +72,8 @@ fi
 
 
 # crontab schdule script 
-croncmd="${path}/${0##*/} ${SUB_DOMAIN}"
-cronjob="*/2 * * * * /bin/bash $croncmd"
+croncmd="${path}/${0##*/} ${SUB_DOMAIN} 2>&1 | logger -t dns-updater"
+cronjob="*/3 * * * * /bin/bash $croncmd"
 ( crontab -l | grep -v -F "$croncmd" ; echo "$cronjob" ) | crontab - 
 
 #Function Send Message to telegram 
